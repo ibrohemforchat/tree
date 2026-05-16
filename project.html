@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как охладить ваш двор на 3°C с помощью деревьев</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+          /* --- Стили для шапочки (Header) --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(244, 249, 244, 0.85); /* Полупрозрачный фон */
+    backdrop-filter: blur(12px); /* Эффект размытого стекла */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--accent-green);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--accent-mint);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-green);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-green);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.header-cta {
+    background: var(--accent-green);
+    color: #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-green);
+}
+
+.header-cta:hover {
+    background: transparent;
+    color: var(--accent-green);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Скрываем ссылки на мобилках */
+    }
+    .header-container {
+        padding: 0.8rem 1rem;
+    }
+}
+:root {
+            --bg-color: #f4f9f4;
+            --text-primary: #1f2937;
+            --accent-green: #2c5e3b;
+            --accent-mint: #4ade80;
+            --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            --border-radius: 16px;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-color: #2c5e3b;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(31, 41, 55, 0.7), rgba(44, 94, 59, 0.7));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .core-rule {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            padding: 1.5rem 2rem;
+            border-radius: var(--border-radius);
+            font-size: 1.5rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--card-shadow);
+            display: inline-block;
+            border: 2px solid var(--accent-mint);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        /* Science Section */
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .science-card {
+            background: var(--glass-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .science-card h3 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Catalog Section */
+        .tree-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .tree-card {
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .tree-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tree-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #e5e7eb;
+            display: block;
+        }
+
+        .tree-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tree-card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-green);
+        }
+
+        .tree-tag {
+            display: inline-block;
+            background: var(--accent-mint);
+            color: var(--text-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tree-stats {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .tree-stats li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+            padding-bottom: 0.25rem;
+        }
+
+        .tree-stats li span:last-child {
+            font-weight: 600;
+        }
+
+        /* Calculator Section */
+        .calculator-wrapper {
+            background: #ffffff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 2px solid var(--bg-color);
+        }
+
+        .calc-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: var(--accent-green);
+        }
+
+        .progress-container {
+            flex: 2;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 24px;
+            background: #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--accent-green);
+            transition: width 0.5s ease, background-color 0.5s ease;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tree-btn {
+            background: var(--bg-color);
+            border: 2px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tree-btn:hover:not(:disabled) {
+            background: var(--accent-green);
+            color: #ffffff;
+        }
+
+        .tree-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border-color: #9ca3af;
+            color: #9ca3af;
+        }
+
+        .results-panel {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .results-panel h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        #selectedTreesList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            min-height: 30px;
+        }
+
+        .tree-badge {
+            background: #ffffff;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .total-cost-wrapper {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+
+        #successMessage {
+            display: none;
+            background: var(--accent-mint);
+            color: var(--text-primary);
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-top: 2rem;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background: var(--accent-green);
+            color: #ffffff;
+            border: none;
+            padding: 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1f4229;
+        }
+
+        /* Eco Passport */
+        .passport-container {
+            display: none;
+            margin-top: 3rem;
+            padding: 3rem;
+            background: #fffdf5;
+            border: 1px solid #d1d5db;
+            border-radius: 0;
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+
+        .passport-container::before {
+            content: '';
+            position: absolute;
+            top: 10px; bottom: 10px; left: 10px; right: 10px;
+            border: 2px solid var(--accent-green);
+            pointer-events: none;
+        }
+
+        .passport-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-green);
+            padding-bottom: 1rem;
+        }
+
+        .passport-header h3 {
+            font-family: serif;
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .passport-body {
+            font-family: monospace;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        .badge-certified {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background: var(--accent-mint);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--accent-green);
+            border: 4px dashed var(--accent-green);
+            transform: rotate(15deg);
+        }
+
+        /* NEW Time Machine Simulation */
+        .time-machine-wrapper {
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+        }
+
+        .slider-container {
+            margin: 2rem 0;
+        }
+
+        input[type=range] {
+            width: 100%;
+            max-width: 500px;
+            cursor: pointer;
+        }
+
+        .tree-simulation {
+            height: 420px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin: 2rem 0;
+            border-bottom: 4px solid var(--accent-green);
+            padding-bottom: 1rem;
+            position: relative;
+            overflow: hidden;;
+        }
+
+        /* Composite Tree Architecture */
+        .composite-tree {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        /* Текстура листвы с Unsplash */
+        .tree-canopy {
+            background-image: url('https://images.unsplash.com/photo-1543227568-1e4277bbfb20?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 45% 55% 45% 55% / 55% 45% 55% 45%;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.3), inset 0 -20px 40px rgba(0,0,0,0.4);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Размеры для Года 1 по умолчанию */
+            width: 80px;
+            height: 80px;
+            bottom: 60px;
+        }
+
+        /* Текстура коры (ствол) с Unsplash */
+        .tree-trunk {
+            background-image: url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: inset 5px 0 15px rgba(0,0,0,0.5);
+            
+            /* Размеры для Года 1 по умолчанию */
+            width: 15px;
+            height: 80px;
+        }
+
+        /* Тень на земле для реализма */
+        .tree-shadow {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 12px;
+            background: rgba(0,0,0,0.15);
+            border-radius: 50%;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 0;
+            width: 60px;
+        }
+
+        .simulation-stats {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-green);
+            background: whitesmoke;
+            padding: 1rem 2rem;
+            border-radius: 999px;
+            display: inline-block;
+            box-shadow: var(--card-shadow);
+        }
+
+    </style>
+</head>
+<body>
+        <!-- Main Header -->
+<nav class="main-header">
+    <div class="header-container">
+        <!-- Логотип -->
+        <a href="#" class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 8C17 5.24 14.76 3 12 3S7 5.24 7 8C7 10.76 9.24 13 12 13S17 10.76 17 8ZM12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11Z"/>
+                <path d="M21 19C19.9 16.53 17.61 14.6 14.86 13.78C13.97 13.51 13.01 13.65 12.24 14.15L12 14.3L11.76 14.15C10.99 13.65 10.03 13.51 9.14 13.78C6.39 14.6 4.1 16.53 3 19C2.86 19.33 3.09 19.7 3.45 19.74L8 20.3C8.04 20.91 8.24 21.49 8.58 22H15.42C15.76 21.49 15.96 20.91 16 20.3L20.55 19.74C20.91 19.7 21.14 19.33 21 19ZM12 18C10.9 18 10 17.1 10 16C10 14.9 10.9 14 12 14C13.1 14 14 14.9 14 16C14 17.1 13.1 18 12 18Z"/>
+            </svg>
+            TreeCool
+        </a>
+
+        <!-- Ссылки навигации -->
+        <ul class="nav-links">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Наука</a></li>
+            <li><a href="#">Каталог</a></li>
+        </ul>
+
+        <!-- Кнопка призыва к действию -->
+        <a href="#yardArea" class="header-cta">Калькулятор тени</a>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Охладите ваш двор на 3°C</h1>
+            <p>Используйте силу природы. Узнайте, как посадка правильных деревьев создает индивидуальный микроклимат и значительно снижает температуру вашего двора.</p>
+            <div class="core-rule">
+                Необходимая площадь тени = Площадь двора × 0.35
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Science Section -->
+        <h2>Физика и математика охлаждения</h2>
+        <section class="science-grid">
+            <div class="science-card">
+                <h3>Эвапотранспирация</h3>
+                <p>Деревья работают как природные кондиционеры. Взрослое дерево поглощает тепло, испаряя до 150 литров воды в день, эффективно охлаждая окружающий воздух.</p>
+            </div>
+            <div class="science-card">
+                <h3>Альбедо и тень</h3>
+                <p>Прямые солнечные лучи быстро нагревают асфальт и бетон. Плотная крона блокирует солнечную радиацию, резко снижая температуру поверхности.</p>
+            </div>
+            <div class="science-card">
+                <h3>Правило 35%</h3>
+                <p>Чтобы добиться снижения температуры микроклимата на 3°C, кроны деревьев должны покрывать ровно 35% всей площади двора. Одно взрослое дерево дает в среднем 40 кв.м тени.</p>
+            </div>
+            <div class="science-card">
+                <h3>Руководство по посадке</h3>
+                <p>Сажайте деревья только ранней весной (март-апрель) или поздней осенью (октябрь-ноябрь) в период покоя для максимальной приживаемости в континентальном климате.</p>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <h2>Каталог деревьев (Континентальный климат)</h2>
+        <section class="tree-grid">
+            <!-- Elm -->
+            <div class="tree-card">
+                <img src="https://fantasyloft.ru/image/catalog/image/articles/karagach/statya-derevo-karagach-3.jpg" 
+                     alt="Вяз (Карагач)" loading="lazy" 
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                <div class="tree-card-content">
+                    <h3>Вяз (Карагач)</h3>
+                    <span class="tree-tag">1000 сом</span>
+                    <ul class="tree-stats">
+                        <li><span>Рост:</span> <span>Быстрый</span></li>
+                        <li><span>Тень:</span> <span>Отличная / Плотная</span></li>
+                        <li><span>Риск аллергии:</span> <span>Средний</span></li>
+                    </ul>
+                    <p>Засухоустойчив и невероятно вынослив. Идеально подходит для быстрого создания тени в суровое лето.</p>
+                </div>
+            </div>
+            <!-- English Oak -->
+            <div class="tree-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Quercus_robur_JPG_%28d1%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original" 
+                     alt="Дуб черешчатый" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                <div class="tree-card-content">
+                    <h3>Дуб черешчатый</h3>
+                    <span class="tree-tag">8000 сом</span>
+                    <ul class="tree-stats">
+                        <li><span>Рост:</span> <span>Медленный</span></li>
+                        <li><span>Тень:</span> <span>Премиальная</span></li>
+                        <li><span>Риск аллергии:</span> <span>Низкий</span></li>
+                    </ul>
+                    <p>Имеет глубокие корни, что делает его абсолютно безопасным для близлежащего тротуара. Инвестиция для поколений.</p>
+                </div>
+            </div>
+            <!-- Norway Maple -->
+            <div class="tree-card">
+                <img src="https://dostavka-krupnomerov.ru/assets/images/products/140/klen-ostrolistnyi.jpg" 
+                     alt="Клен остролистный" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558066531-b3b3a4a0dbff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                <div class="tree-card-content">
+                    <h3>Клен остролистный</h3>
+                    <span class="tree-tag">3500 сом</span>
+                    <ul class="tree-stats">
+                        <li><span>Рост:</span> <span>Средний</span></li>
+                        <li><span>Тень:</span> <span>Хорошая</span></li>
+                        <li><span>Риск аллергии:</span> <span>Низкий</span></li>
+                    </ul>
+                    <p>Обеспечивает потрясающие осенние краски и отличное покрытие кроны летом.</p>
+                </div>
+            </div>
+            <!-- Birch -->
+            <div class="tree-card">
+                <img src="https://azbuka-sada96.ru/wp-content/uploads/2023/06/bereza-obyknovennaya.jpg" 
+                     alt="Береза" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500366662453-70535e61f22b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                <div class="tree-card-content">
+                    <h3>Береза</h3>
+                    <span class="tree-tag">1000 сом</span>
+                    <ul class="tree-stats">
+                        <li><span>Рост:</span> <span>Быстрый</span></li>
+                        <li><span>Тень:</span> <span>Слабая / Легкая</span></li>
+                        <li><span>Риск аллергии:</span> <span style="color: red;">Высокий!</span></li>
+                    </ul>
+                    <p>Поглощает огромное количество почвенной воды. Создает красивые легкие блики, а не плотную тень.</p>
+                </div>
+            </div>
+            <!-- Sycamore -->
+            <div class="tree-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Platanus.JPG/1280px-Platanus.JPG?utm_source=ru.wiktionary.org&utm_campaign=index&utm_content=thumbnail" 
+                     alt="Платан" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                <div class="tree-card-content">
+                    <h3>Платан</h3>
+                    <span class="tree-tag">4000 сом</span>
+                    <ul class="tree-stats">
+                        <li><span>Рост:</span> <span>Быстрый</span></li>
+                        <li><span>Тень:</span> <span>Максимальная</span></li>
+                        <li><span>Риск аллергии:</span> <span>Выше среднего</span></li>
+                    </ul>
+                    <p>Отличается огромными листьями, которые обеспечивают невероятно плотную и широкую тень.</p>
+                </div>
+            </div>
+            <!-- Walnut -->
+            <div class="tree-card">
+                <img src="https://ales-spb.ru/assets/galleries/358/tree.jpg" 
+                     alt="Грецкий орех" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                <div class="tree-card-content">
+                    <h3>Грецкий орех</h3>
+                    <span class="tree-tag">3000 сом</span>
+                    <ul class="tree-stats">
+                        <li><span>Рост:</span> <span>Средний</span></li>
+                        <li><span>Тень:</span> <span>Отличная</span></li>
+                        <li><span>Риск аллергии:</span> <span>Низкий</span></li>
+                    </ul>
+                    <p>Выделяет юглон — природное соединение, подавляющее конкурирующие растения под его кроной.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator Section -->
+        <h2>Интерактивный планировщик тени</h2>
+        <section class="calculator-wrapper">
+            <div class="calc-top">
+                <div class="input-group">
+                    <label for="yardArea">Общая площадь двора (кв.м)</label>
+                    <input type="number" id="yardArea" placeholder="Введите размер двора (например, 500)" min="0">
+                </div>
+                <div class="progress-container">
+                    <div class="progress-labels">
+                        <span>Текущая тень: <span id="currentShadeLabel">0</span> кв.м</span>
+                        <span>Целевая тень: <span id="targetShadeLabel">0</span> кв.м</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBarFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-grid">
+                <button class="tree-btn" onclick="addTree('Вяз', 1000)">Добавить Вяз - 1000 сом</button>
+                <button class="tree-btn" onclick="addTree('Дуб', 8000)">Добавить Дуб - 8000 сом</button>
+                <button class="tree-btn" onclick="addTree('Клен', 3500)">Добавить Клен - 3500 сом</button>
+                <button class="tree-btn" onclick="addTree('Береза', 1000)">Добавить Березу - 1000 сом</button>
+                <button class="tree-btn" onclick="addTree('Платан', 4000)">Добавить Платан - 4000 сом</button>
+                <button class="tree-btn" onclick="addTree('Орех', 3000)">Добавить Орех - 3000 сом</button>
+            </div>
+
+            <div class="results-panel">
+                <h4>Инвентарь выбранных деревьев:</h4>
+                <div id="selectedTreesList">
+                    <span style="color: #9ca3af; font-style: italic;">Пока не добавлено ни одного дерева. Введите площадь двора и нажимайте кнопки выше.</span>
+                </div>
+                
+                <div class="total-cost-wrapper">
+                    <span>Общие инвестиции:</span>
+                    <span id="totalCostLabel">0 сом</span>
+                </div>
+
+                <div id="successMessage">
+                    Охлаждение на 3°C Достигнуто!
+                </div>
+
+                <button id="ecoBtn" class="btn-primary" style="display: none;" onclick="generatePassport()">
+                    Сгенерировать Эко-паспорт
+                </button>
+            </div>
+
+            <!-- Eco Passport DOM Element -->
+            <div id="ecoPassport" class="passport-container">
+                <div class="badge-certified">Сертифицировано<br>Охлаждено на 3°C</div>
+                <div class="passport-header">
+                    <h3>Официальный Эко-паспорт</h3>
+                    <p>Сертификат оптимизации микроклимата</p>
+                </div>
+                <div class="passport-body">
+                    <p><strong>Общая площадь участка:</strong> <span id="passArea"></span> кв.м</p>
+                    <p><strong>Покрытие целевой тени:</strong> <span id="passShade"></span> кв.м</p>
+                    <p><strong>Всего посажено деревьев:</strong> <span id="passCount"></span></p>
+                    <p><strong>Инвентарь видов:</strong> <span id="passInventory"></span></p>
+                    <hr style="margin: 1rem 0; border: none; border-top: 1px dashed var(--accent-green);">
+                    <p style="font-size: 1.5rem; font-weight: 800; text-align: right;">Общая стоимость: <span id="passCost"></span> сом</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Time Machine Section -->
+        <h2>Машина времени роста</h2>
+        <section class="time-machine-wrapper">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Визуализируйте органичный рост ствола и кроны за 20 лет.</p>
+            
+            <div class="slider-container">
+                <input type="range" id="timeSlider" min="1" max="20" value="1">
+            </div>
+
+            <!-- Обновленная архитектура составного дерева -->
+            <div class="tree-simulation">
+                <div class="composite-tree">
+                    <div id="treeCanopy" class="tree-canopy"></div>
+                    <div id="treeTrunk" class="tree-trunk"></div>
+                    <div id="treeShadow" class="tree-shadow"></div>
+                </div>
+            </div>
+
+            <div class="simulation-stats" id="timeMachineStats">
+                Площадь тени: 2.0 кв.м (Год 1)
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+        // --- 1. State Management ---
+        let state = {
+            yardArea: 0,
+            targetShade: 0,
+            currentShade: 0,
+            selectedTrees: [],
+            totalCost: 0
+        };
+
+        const SHADE_PER_TREE = 40;
+        const TARGET_RATIO = 0.35;
+
+        // --- 2. DOM Elements Selection ---
+        const yardAreaInput = document.getElementById('yardArea');
+        const targetShadeLabel = document.getElementById('targetShadeLabel');
+        const currentShadeLabel = document.getElementById('currentShadeLabel');
+        const progressBarFill = document.getElementById('progressBarFill');
+        const selectedTreesList = document.getElementById('selectedTreesList');
+        const totalCostLabel = document.getElementById('totalCostLabel');
+        const successMessage = document.getElementById('successMessage');
+        const ecoBtn = document.getElementById('ecoBtn');
+        const treeButtons = document.querySelectorAll('.tree-btn');
+        const ecoPassport = document.getElementById('ecoPassport');
+
+        // --- 3. Calculator Logic ---
+
+        // Input Listener
+        yardAreaInput.addEventListener('input', (e) => {
+            const value = parseFloat(e.target.value) || 0;
+            state.yardArea = value;
+            state.targetShade = value * TARGET_RATIO;
+            
+            ecoPassport.style.display = 'none';
+            updateUI();
+        });
+
+        // Add Tree Function
+        function addTree(name, price) {
+            if (state.yardArea <= 0) {
+                alert("Пожалуйста, сначала введите корректную площадь двора!");
+                yardAreaInput.focus();
+                return;
+            }
+
+            state.selectedTrees.push({ name, price });
+            state.currentShade = state.selectedTrees.length * SHADE_PER_TREE;
+            state.totalCost = state.selectedTrees.reduce((sum, tree) => sum + tree.price, 0);
+            
+            updateUI();
+        }
+
+        // Core UI Update Function
+        function updateUI() {
+            targetShadeLabel.innerText = state.targetShade.toFixed(1);
+            currentShadeLabel.innerText = state.currentShade;
+            totalCostLabel.innerText = state.totalCost + " сом";
+
+            // Render Inventory
+            if (state.selectedTrees.length === 0) {
+                selectedTreesList.innerHTML = '<span style="color: #9ca3af; font-style: italic;">Пока не добавлено ни одного дерева. Введите площадь двора и нажимайте кнопки выше.</span>';
+            } else {
+                selectedTreesList.innerHTML = '';
+                const treeCounts = {};
+                state.selectedTrees.forEach(t => {
+                    treeCounts[t.name] = (treeCounts[t.name] || 0) + 1;
+                });
+
+                for (const [name, count] of Object.entries(treeCounts)) {
+                    const badge = document.createElement('div');
+                    badge.className = 'tree-badge';
+                    badge.innerText = `${count}x ${name}`;
+                    selectedTreesList.appendChild(badge);
+                }
+            }
+
+            // Progress Bar Math
+            let progressPercentage = 0;
+            if (state.targetShade > 0) {
+                progressPercentage = (state.currentShade / state.targetShade) * 100;
+            }
+            const visualProgress = Math.min(progressPercentage, 100);
+            progressBarFill.style.width = visualProgress + "%";
+
+            // Success Evaluation
+            const isSuccess = state.currentShade >= state.targetShade && state.targetShade > 0;
+
+            if (isSuccess) {
+                progressBarFill.style.backgroundColor = 'var(--accent-mint)';
+                successMessage.style.display = 'block';
+                ecoBtn.style.display = 'block';
+                treeButtons.forEach(btn => btn.disabled = true);
+            } else {
+                progressBarFill.style.backgroundColor = 'var(--accent-green)';
+                successMessage.style.display = 'none';
+                ecoBtn.style.display = 'none';
+                ecoPassport.style.display = 'none';
+                treeButtons.forEach(btn => btn.disabled = false);
+            }
+        }
+
+        // --- 4. Eco-Passport Generator ---
+        function generatePassport() {
+            document.getElementById('passArea').innerText = state.yardArea.toFixed(1);
+            document.getElementById('passShade').innerText = state.currentShade;
+            document.getElementById('passCount').innerText = state.selectedTrees.length;
+            
+            const uniqueTrees = [...new Set(state.selectedTrees.map(t => t.name))].join(', ');
+            document.getElementById('passInventory').innerText = uniqueTrees;
+            document.getElementById('passCost').innerText = state.totalCost;
+            
+            ecoPassport.style.display = 'block';
+            ecoPassport.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // --- 5. NEW Composite Time Machine Logic ---
+        const timeSlider = document.getElementById('timeSlider');
+        const treeCanopy = document.getElementById('treeCanopy');
+        const treeTrunk = document.getElementById('treeTrunk');
+        const treeShadow = document.getElementById('treeShadow');
+        const timeMachineStats = document.getElementById('timeMachineStats');
+
+        timeSlider.addEventListener('input', (e) => {
+            const year = parseInt(e.target.value);
+            // Прогресс от 0.0 до 1.0
+            const progress = (year - 1) / 19; 
+            
+            // Расчет тени от 2 до 40 кв.м
+            const shade = 2 + progress * 38;
+
+            // Расчет ствола (утолщается и немного растет в высоту)
+            // Ширина: от 15px до 45px
+            // Высота: от 80px до 150px
+            const trunkWidth = 15 + progress * 30; 
+            const trunkHeight = 80 + progress * 70; 
+
+            // Расчет кроны (сильно разрастается)
+            // Размер: от 80px до 320px
+            const canopySize = 80 + progress * 240; 
+            
+            // Чтобы крона всегда "сидела" на ветках ствола, 
+            // мы опускаем ее так, чтобы она перекрывала верхнюю четверть ствола.
+            const canopyBottom = trunkHeight - (canopySize * 0.25);
+
+            // Тень под деревом (расширяется вместе с кроной)
+            const shadowWidth = 60 + progress * 240;
+
+            // Применяем новые стили к DOM-элементам
+            treeTrunk.style.width = `${trunkWidth}px`;
+            treeTrunk.style.height = `${trunkHeight}px`;
+
+            treeCanopy.style.width = `${canopySize}px`;
+            treeCanopy.style.height = `${canopySize}px`;
+            treeCanopy.style.bottom = `${canopyBottom}px`;
+
+            treeShadow.style.width = `${shadowWidth}px`;
+
+            timeMachineStats.innerText = `Площадь тени: ${shade.toFixed(1)} кв.м (Год ${year})`;
+        });
+
+    </script>
+</body>
+</html>
